@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<!-- 强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览； -->
+		<title>首页</title>
+		<link rel="stylesheet" media="screen and (max-width:600px)" href="small.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width:899px) and (min-width:601px)" href="middle.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (min-width:900px)" href="big.css" type="text/css"  />
+		<script type="text/javascript">
+			window.onload=function(){
+				function stopPropagation(e) {
+				   window.event? window.event.cancelBubble = true : e.stopPropagation();
+				}
+				var aCol=['#41a2b7','#2a5d9a','#e66a70','#11a541'];
+				var aLI=document.getElementsByTagName('li');
+				for(var i=0,l=aLI.length;i<l;i++){
+					aLI[i].style.backgroundColor=aCol[i%4];
+				}
+				var submit=document.getElementById('submit');
+				var message=document.getElementById('message');
+				var showLove=document.getElementById('showLove');
+				var text=document.getElementById('text');
+				var form_i=document.getElementById('form_i');
+				showLove.onclick=function (e){
+					message.style.display='flex';
+					text.value='';
+					text.focus();
+				}
+				text.onclick=function(e){
+					stopPropagation(e);
+				}
+				form_i.onclick=function(e){
+					stopPropagation(e);
+				}
+				message.onclick=function(e){
+					message.style.display='none';
+				}
+				submit.onclick=function(){
+					message.style.display='none';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="message" class="message">
+				<form class="form_i" id="form_i" method='post' action='sdfdsf'>
+					<h2>表白信息</h2>
+					<textarea id="text" name="content"  rows="7"></textarea>
+					<input type='submit' id="submit" name='sno2' value='确认'>
+				</form>
+			</div>
+			<div class="head">
+				<img src="bg01.png" alt="">
+				<input type="button" value="我要表白" id="showLove" />
+			</div>
+			<div class="main">
+				<ul class="list">
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！第三节课东方今典借鸡生蛋上了对方家里看书的房间都是经济上了对方都是快乐说的分离技术的反馈技术的来访记录时代缴费卡上的解放路口时间啦水电费监考老师等级分类考试大家反馈了</p>
+						<a href="discuss.html">评论-->(0)</a>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+						<a href="discuss.html">评论-->(0)</a>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+						<a href="discuss.html">评论-->(0)</a>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+						<a href="discuss.html">评论-->(0)</a>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+					</li>
+					<li>
+						<span> 匿名消息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017-10-09  18:58:37</span>
+						<p>表白我自己，一级棒！</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
